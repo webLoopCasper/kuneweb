@@ -23,4 +23,5 @@ body, html{
 
 p,a,li,h1,h2,h3{
     font-family: "dance";
+    letter-spacing: 2px;
 }

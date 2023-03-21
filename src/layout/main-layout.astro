@@ -1,6 +1,8 @@
 ---
 const {title} = Astro.props;
 import Mainmenu from "../components/Mainmenu.astro";
+import Mainfooter from "../components/Mainfooter.astro";
+
 ---
 
 
@@ -16,6 +18,8 @@ import Mainmenu from "../components/Mainmenu.astro";
 		<Mainmenu/>
 
         <slot/>
+
+        <Mainfooter/>
 
     </body>
  </html>
