@@ -1,0 +1,26 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --mainGreen: #D6FF7D;
+    --mainBlack: #272727;
+    --mainBlue: #1602FF;
+}
+
+a{
+    text-decoration: none;
+    color:var(--mainBlack)
+}
+body, html{
+     overflow-x: hidden; 
+}
+
+@font-face {
+    font-family: "dance";
+    src: url("Dance.ttf") format("ttf");
+}
+
+p,a,li,h1,h2,h3{
+    font-family: "dance";
+}
