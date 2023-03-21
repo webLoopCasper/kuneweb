@@ -3,11 +3,14 @@
 ---
 
 <footer>
-    <div>
-        <div><a href="">Facebook</a></div>
-        <div><a href="">Instagram</a></div>
-        <div><a href="">Twitter</a></div>
+    <div class="social-container">
+        <div>
+            <div class="facebook"><a href="">Facebook</a></div>
+            <div class="instagram"><a href="">Instagram</a></div>
+            <div><a href="twitter">Twitter</a></div>
+        </div>
     </div>
+    
     <div>
 
     </div>
@@ -22,5 +25,13 @@
         margin: 5px;
         color:white;
         font-size: 12px;
+    }
+    .social-container{
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid var(--mainBlack);
+    }
+    .faceboock{
+        
     }
 </style>
