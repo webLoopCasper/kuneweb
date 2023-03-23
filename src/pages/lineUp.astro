@@ -3,71 +3,54 @@ import MainLayout from "../layout/main-layout.astro";
 import Artist from "../components/Artist.astro";
 import Textbar from "../components/Textbar.astro";
 import Newsletter from "../components/Newsletter.astro";
-const data = await fetch("https://bcsoemsjqytfmopgkthm.supabase.co/rest/v1/kune_scener",
-{
-	method:"GET", 
-	headers:{
-		apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjc29lbXNqcXl0Zm1vcGdrdGhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzkyMjcyNTksImV4cCI6MTk5NDgwMzI1OX0.hdmkNZsPnhx4RYSd23y0aoWNmEYCkC1CSca3lg4WmAw",
-	}
-}).then(res => res.json()); 
+import Social from "../components/Social.astro";
+const data = await fetch("https://bcsoemsjqytfmopgkthm.supabase.co/rest/v1/kune_scener", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjc29lbXNqcXl0Zm1vcGdrdGhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzkyMjcyNTksImV4cCI6MTk5NDgwMzI1OX0.hdmkNZsPnhx4RYSd23y0aoWNmEYCkC1CSca3lg4WmAw",
+  },
+}).then((res) => res.json());
 
 console.log(data[0].day);
 ---
 
-
 <MainLayout title="Line up">
-    <div class="space-maker">
-    
-        <h1>Line Up</h1>
-        
-        <div class="artist-setup">
-            {
-                data.map(artistData =>{
-                   return <Artist day={artistData.day} name={artistData.name}/>
-                })
-            }
-            
-        
-        </div>
-    </div>  
-     <Textbar/>
+  <div class="space-maker">
+    <h1>Line Up</h1>
 
-    <Newsletter/>
-   
-    
+    <div class="artist-setup">
+      {
+        data.map((artistData) => {
+          return <Artist day={artistData.day} name={artistData.name} />;
+        })
+      }
+    </div>
+  </div>
+  <Textbar />
 
+  <Newsletter />
 
+  <Social />
 </MainLayout>
 
-
-
 <style>
-  
-    h1{
-        font-size: 45px;
-        padding-bottom: 40px;
-    }
-    .artist-setup{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px 40px;
-       
-    }
-    .artist-setup div{
-        flex-grow:1;
-    }
+  h1 {
+    font-size: 45px;
+    padding-bottom: 40px;
+  }
+  .artist-setup {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 40px;
+  }
+  .artist-setup div {
+    flex-grow: 1;
+  }
 
-    .space-maker{
-        max-width: 1000px;
-        margin-inline: auto;
-        padding: 20px;
-    }
-   
-  
+  .space-maker {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 20px;
+  }
 </style>
-
-
-
-
-
