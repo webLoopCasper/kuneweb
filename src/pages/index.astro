@@ -5,7 +5,7 @@ import Indeximg from "../components/Indeximg.astro";
 import Banner from "../components/Banner.astro";
 import Kuneimg from "../components/Kuneimg.astro";
 import Volunteerimg from "../components/Volunteerimg.astro";
-import Nyhedsbrev from "../components/Nyhedsbrev.astro";
+import Newsletter from "../components/Newsletter.astro";
 ---
 
 <MainLayout title="Frontpage">
@@ -15,24 +15,24 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
       <Textbar />
       <Banner />
       <Kuneimg />
-      <Volunteerimg />
     </div>
   </section>
   <section class="section2">
-    <Nyhedsbrev />
+    <div><Volunteerimg /></div>
+    <Newsletter />
   </section>
+
+  <style>
+    .section1 {
+      background-image: url("public/img/illustrationer/KUNE IL 1@10x-kopi.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .section2 {
+      background-image: url("public/img/illustrationer/KUNE IL 3@10x-kopi.png");
+      background-repeat: no-repeat;
+      background-size: 50%;
+    }
+  </style>
 </MainLayout>
-
-<style>
-  .section1 {
-    background-image: url("public/img/illustrationer/KUNE IL 1@10x-kopi.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  .section2 {
-    background-image: url("public/img/illustrationer/KUNE IL 3@10x-kopi.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-</style>
