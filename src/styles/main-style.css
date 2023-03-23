@@ -5,14 +5,14 @@
   --mainGreen: #d6ff7d;
   --mainBlack: #272727;
   --mainBlue: #1602ff;
-  --mainRed: #FF1717;
+  --mainRed: #ff1717;
 }
 
 a {
   text-decoration: none;
   color: var(--mainBlack);
 }
-body{
+body {
   /* overflow-x: hidden; */
 }
 
@@ -41,4 +41,12 @@ h2 {
 }
 h3 {
   font-size: 2rem;
+}
+
+p {
+  line-height: 145%;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
 }
