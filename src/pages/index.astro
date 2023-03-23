@@ -1,18 +1,17 @@
 ---
 import MainLayout from "../layout/main-layout.astro";
+import Textbar from "../components/Textbar.astro";
+import Indeximg from "../components/Indeximg.astro";
+import Banner from "../components/Banner.astro";
 ---
 
 <MainLayout title="Frontpage">
-  <h1>19 - 23 JULY UNGD0MS0EN</h1>
-  <div></div>
+  <div>
+    <img src="public/img/kune/island/UØ_UNE22-Daniela Stoian-4364.jpg" alt="" />
+  </div>
+  <Indeximg />
+  <Textbar />
+  <Banner />
 </MainLayout>
-<Textbar />
-
-<div class="newsletter-container">
-  <form action="/action_page.php">
-    <label for="fname">Nyhedsbrev</label><br />
-    <input type="email" id="fname" name="fname" value="" /><br />
-  </form>
-</div>
 
 <style></style>
