@@ -2,10 +2,205 @@
 import MainLayout from "../layout/main-layout.astro";
 ---
 
-
-<MainLayout title="Frontpage">
+<MainLayout title="Tickets">
+  <main>
     <h1>Tickets</h1>
 
+    <section class="allTickets">
+      <div class="fullTicket">
+        <div class="borderBlue">
+          <h2>Full Ticket</h2>
+          <p class="fullPrice">1400,-</p>
+        </div>
+      </div>
+
+      <h2>ONE DAY TICKETS</h2>
+      <section class="oneDayTickets">
+        <div class="div1">
+          <div class="borderBlue">
+            <h3>WEDNESDAY</h3>
+            <p class="oneDay">449,-</p>
+          </div>
+        </div>
+
+        <div class="div2">
+          <div class="borderBlue">
+            <h3 class="thursday">THURSDAY</h3>
+            <p class="oneDay">449,-</p>
+          </div>
+        </div>
+
+        <div class="div3">
+          <div class="borderBlue">
+            <h3 class="friday">FRIDAY</h3>
+            <p class="oneDay">449,-</p>
+          </div>
+        </div>
+
+        <div class="div4">
+          <div class="borderBlue">
+            <h3>SATURDAY</h3>
+            <p class="oneDay">449,-</p>
+          </div>
+        </div>
+
+        <div class="div5">
+          <div class="borderBlue">
+            <h3 class="sunday">SUNDAY</h3>
+            <p class="oneDay">449,-</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <h3>MORE INFO</h3>
+
+    <section class="information">
+      <h2>TRANSPORTATION</h2>
+      <h3>BY FERRY</h3>
+      <img src="/img/kune/island/UØ_KUNE22- Franscesco Turri-3405.jpg" alt="BILLEDE" />
+      <p>
+        You can travel to KUNE Festival in only 30 minutes with Sparshipping. The ferry takes departure from Nyhavn in the city centre and you can get to us for only 65,- if you are between 15-25 yrs. See more details on their website www.
+        sparshipping.dk
+      </p>
+      <p>
+        Traveling to KUNE Festival by boat for a 30-minute journey to an island location adds a unique and significant element to the festival experience. Reaching the festival site by boat separates us from our everyday lives and creates a sense of
+        escape to a new world. The festival island becomes a self-contained microcosm where everyone is living, breathing, and experiencing the festival together. This close-knit community setting creates a petri dish for social interactions, where
+        we can connect and bond in a way that is impossible in our everyday lives.
+      </p>
+      <h3>BY PRIVATE BOAT</h3>
+      It is also possible to sail your own boat to the island, and have it tethered at Ungdomsøen. Though we only have a limited amount of space, you can contact us, and learn more about about the possibilities for sailing your own boat to us.
+      <h2>CAMPING</h2>
+      <img src="/img/kune/island/UØ_KUNE22- Franscesco Turri-3405.jpg" alt="BILLEDE2" />
+      <p>
+        The island is a decommissioned defense fort built in the 19th century. A unique landmark with historical value, the fort-island was recently renovated and repurposed into a place dedicated to young people and innovative cultural initiatives.
+        It can host 2500 people, 1000 of which could be accommodated in the camping area. With a full festival ticket you get acces to the camping area. When you arrive at the festival, you will be guided by our voulenteers to the camping area and
+        get an assigned area you can camp in. Remember to bring your own tent and other needed supplies for camping.
+      </p>
+    </section>
+  </main>
 </MainLayout>
 
+<style>
+  /* OVERORDNET*/
+  main {
+    margin: 3rem;
+  }
 
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2,
+  h3 {
+    color: var(--mainBlue);
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+
+  /* TICKETS DEL AF SIDEN */
+  .allTickets {
+    display: grid;
+    gap: 2rem;
+    background-image: url("/img/illustrationer/KUNE IL 1@10x-kopi.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+  }
+
+  .fullTicket {
+    text-align: right;
+    border-bottom: 20px solid transparent;
+  }
+  .fullPrice,
+  .oneDay {
+    background-color: #d6ff7dee;
+    color: var(--mainGreen);
+    -webkit-text-stroke: 1px var(--mainBlue);
+    font-size: 5rem;
+    border-radius: 1.5rem;
+  }
+
+  .fullPrice {
+    height: 13rem;
+    font-size: 6rem;
+  }
+  .oneDay {
+    text-align: center;
+    height: 12rem;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .borderBlue {
+    position: relative;
+    padding: 20px;
+  }
+  .borderBlue:before {
+    content: ""; /* to create an empty pseudo-element */
+    position: absolute; /* to position the element relative to the container */
+    top: 75px; /* to position the border box above the container */
+    left: 0px; /* to position the border box to the left of the container */
+    right: 50px; /* to position the border box to the right of the container */
+    bottom: 40px; /* to position the border box below the container */
+    border: 1.5px solid var(--mainBlue); /* to create the border */
+    border-radius: 1.5rem;
+    z-index: 1; /* to position the border box infront of the container */
+    box-shadow: 0px 0px 10px #ccc;
+  }
+
+  /* RENT LAYOUT/PLACERING PÅ SIDEN*/
+  .oneDayTickets {
+    color: var(--mainBlue);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .oneDayTickets > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .thursday {
+    text-align: center;
+  }
+  .friday,
+  .sunday {
+    text-align: right;
+  }
+  .div1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .div2 {
+    grid-column: 2/3;
+    grid-row: 2/2;
+  }
+  .div3 {
+    grid-column: 3/3;
+    grid-row: 1/2;
+  }
+
+  .div4 {
+    grid-row: 3/3;
+    grid-column: 1/2;
+  }
+  .div5 {
+    grid-row: 3/3;
+    grid-column: 3/3;
+  }
+</style>

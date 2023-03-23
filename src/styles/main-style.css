@@ -31,3 +31,14 @@ h3 {
   font-family: "Dance";
   letter-spacing: 2px;
 }
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
