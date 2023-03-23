@@ -7,8 +7,6 @@ import Newsletter from "../components/Newsletter.astro";
 
 <MainLayout title="Tickets">
   <main>
-    <img class="grafik" src="/img/illustrationer/blob2.png" alt="grafik" />
-
     <h1>Tickets</h1>
 
     <section class="allTickets">
@@ -148,14 +146,14 @@ import Newsletter from "../components/Newsletter.astro";
   .infoSubTitle {
     margin-bottom: 2rem;
   }
-  .grafik {
+  /* .grafik {
     position: relative;
     top: 90rem;
     z-index: -1;
     rotate: 20deg;
     transform: scale(1.3);
     display: block;
-  }
+  } */
   .grafik2 {
     position: relative;
     top: -11rem;
@@ -199,6 +197,9 @@ import Newsletter from "../components/Newsletter.astro";
     display: grid;
     gap: 2rem;
     margin: 3rem;
+    background-image: url("public/img/illustrationer/blob2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   .fullTicket {
