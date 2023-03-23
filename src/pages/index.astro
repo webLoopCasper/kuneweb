@@ -3,15 +3,22 @@ import MainLayout from "../layout/main-layout.astro";
 import Textbar from "../components/Textbar.astro";
 import Indeximg from "../components/Indeximg.astro";
 import Banner from "../components/Banner.astro";
+import Kuneimg from "../components/Kuneimg.astro";
+import Volunteerimg from "../components/Volunteerimg.astro";
 ---
 
 <MainLayout title="Frontpage">
   <div>
-    <img src="public/img/kune/island/UØ_UNE22-Daniela Stoian-4364.jpg" alt="" />
+    <Indeximg />
+    <Textbar />
+    <Banner />
+    <Kuneimg />
+    <Volunteerimg />
   </div>
-  <Indeximg />
-  <Textbar />
-  <Banner />
 </MainLayout>
 
-<style></style>
+<style>
+  MainLayout {
+    background-image: url("public/img/illustrationer/KUNE IL 1@10x-kopi.png");
+  }
+</style>
