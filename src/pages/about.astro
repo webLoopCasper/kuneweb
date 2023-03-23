@@ -1,14 +1,61 @@
 ---
+import Textbar from "../components/Textbar.astro";
+import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import MainLayout from "../layout/main-layout.astro";
 import Social from "../components/Social.astro";
 ---
 
 <MainLayout title="About us">
+  <div class="container"></div>
+  <img src="/img/kune/production/about.jpg " />
   <h1>About us</h1>
-  <section>
-    <p>hej</p>
-  </section>
-  <Social />
+  <Textbar />
+  <div class="container_column">
+    <div class="image">
+      <img src="/img/kune/production/1pic.jpg " style="border-radius: 1.5rem;" />
+    </div>
+    <div class="text">
+      <p>
+        The island is a decommissioned defense fort built in the 19th century. A unique landmark with historical value, the fort-island was recently renovated and repurposed into a place dedicated to young people and innovative cultural initiatives.
+        It can host 2500 people, 1000 of which could be accommodated in the camping area.KUNE’s location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open discussions and imagine
+        a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience representative of the modern, young Nordic artistic community.
+      </p>
+    </div>
+  </div>
 </MainLayout>
 
-<style></style>
+<Nyhedsbrev />
+<style>
+  .container_column {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    margin-top: 4rem;
+  }
+
+  .image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+</style>
