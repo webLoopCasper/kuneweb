@@ -9,23 +9,65 @@ import MainLayout from "../layout/main-layout.astro";
   <img src="/img/kune/production/about.jpg " />
   <h1>About us</h1>
   <Textbar />
-  <div class="container_column">
-    <div class="image">
-      <img src="/img/kune/production/1pic.jpg " style="border-radius: 1.5rem;" />
+  <main>
+    <div class="container_column">
+      <div class="image">
+        <img src="/img/kune/production/2pic.jpg " style="border-radius: 1.5rem;" />
+      </div>
+      <div class="text">
+        <h3>KUNE’S HISTORY & VIBES</h3>
+        <p>
+          The island is a decommissioned defense fort built in the 19th century. A unique landmark with historical value, the fort-island was recently renovated and repurposed into a place dedicated to young people and innovative cultural
+          initiatives. It can host 2500 people, 1000 of which could be accommodated in the camping area.KUNE’s location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open
+          discussions and imagine a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience representative of the modern, young Nordic
+          artistic community.
+        </p>
+      </div>
     </div>
-    <div class="text">
-      <p>
-        The island is a decommissioned defense fort built in the 19th century. A unique landmark with historical value, the fort-island was recently renovated and repurposed into a place dedicated to young people and innovative cultural initiatives.
-        It can host 2500 people, 1000 of which could be accommodated in the camping area.KUNE’s location’s secludedness adds to the sense of separation from everyday life. At the same time, the art invites us to engage in open discussions and imagine
-        a world that can be different, making a positive impact over our mentality and worldview. In conjunction with the art, the music creates a holistic cultural experience representative of the modern, young Nordic artistic community.
-      </p>
-    </div>
-  </div>
-</MainLayout>
 
-<Nyhedsbrev />
+    <div class="container_column2">
+      <div class="text2">
+        <h3>“OTHERNESS”</h3>
+        <p>
+          We strive to build an environment that values and celebrates what we call the ‘Otherness’ of the world. The Otherness is a concept that acknowledges the existence of people who may be similar to us in many ways yet possess traits, values,
+          and characteristics that set them apart as “other.” Humans share a great deal in common, but we are also remarkably diverse regarding cultural or social norms, habits, or behavior. The Otherness element recognizes this diversity and
+          encourages us to acknowledge, appreciate, and celebrate our differences. By embracing the Otherness, we create a more inclusive, compassionate, and open-minded world. Rather than viewing differences as a source of conflict or division, we
+          recognize them as a source of strength and beauty. The Otherness element invites us to see the world through the eyes of others, to listen to their stories, and to appreciate their unique perspectives. In doing so, we expand our horizons
+          and gain a more complex understanding of what it means to be human.
+        </p>
+      </div>
+      <div class="image-container">
+        <img src="/img/kune/production/3pic.jpg " style="border-radius: 1.5rem;" />
+        <img src="/img/illustrationer/blob1.png " class="blob" />
+      </div>
+    </div>
+  </main>
+  <Nyhedsbrev />
+</MainLayout>
 <style>
-  .container_column {
+  .image-container {
+    position: relative;
+  }
+
+  .blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(200deg);
+    z-index: -1;
+    width: 40rem;
+    height: 60rem;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 5rem;
+  }
+
+  main {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .container_column,
+  .container_column2 {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
@@ -39,7 +81,16 @@ import MainLayout from "../layout/main-layout.astro";
   }
 
   .text {
-    font-size: 20px;
+    font-size: 15px;
+    margin-left: 2rem;
+    margin-bottom: 10rem;
+  }
+
+  .text2 {
+    font-size: 15px;
+    margin-left: 2rem;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
   }
   img {
     max-width: 100%;
@@ -56,5 +107,10 @@ import MainLayout from "../layout/main-layout.astro";
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+    color: #1602ff;
   }
 </style>
