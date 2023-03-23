@@ -1,0 +1,56 @@
+---
+
+---
+
+<div class="newsletter-container">
+    <form action="#">
+        <label for="fname">Nyhedsbrev</label><br>
+        <div class="input-container">
+            <input type="email" id="fname" name="fname" value="">
+            <img src="img/newsarrow.svg" alt="">
+        </div>
+    </form>
+
+ </div>
+
+
+ <style>
+
+.newsletter-container{
+       max-width: 700px;
+       aspect-ratio:650/400;
+        background-image: url("img/nyhedsbrev.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-inline: auto;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-container{
+        display: flex;
+        align-items: center;
+        position: relative;
+    bottom: 35px;
+    }
+    .newsletter-container label{
+        color:var(--mainGreen);
+        font-size: 50px;
+    }
+
+    .newsletter-container input{
+        border: none;
+        border-bottom: 1px solid var(--mainRed);
+        width: 250px;
+        margin-bottom: 13px;
+    margin-right: 10px;
+    background: none;
+        
+    }
+    .newsletter-container img{
+        width: 20px;
+        height: 20px;
+        display: inline;
+    }
+ </style>
