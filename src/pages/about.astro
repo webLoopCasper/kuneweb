@@ -1,12 +1,30 @@
 ---
+import Banner from "../components/Banner.astro";
 import MainLayout from "../layout/main-layout.astro";
 ---
 
 <MainLayout title="About us">
+  <div class="container"></div>
+  <img src="/img/kune/production/about.jpg " />
   <h1>About us</h1>
-  <section>
-    <p>hej</p>
-  </section>
+  <Banner />
 </MainLayout>
 
-<style></style>
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+</style>
