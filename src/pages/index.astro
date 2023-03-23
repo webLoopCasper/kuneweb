@@ -5,10 +5,11 @@ import Indeximg from "../components/Indeximg.astro";
 import Banner from "../components/Banner.astro";
 import Kuneimg from "../components/Kuneimg.astro";
 import Volunteerimg from "../components/Volunteerimg.astro";
+import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 ---
 
 <MainLayout title="Frontpage">
-  <section>
+  <section class="section1">
     <div>
       <Indeximg />
       <Textbar />
@@ -17,11 +18,20 @@ import Volunteerimg from "../components/Volunteerimg.astro";
       <Volunteerimg />
     </div>
   </section>
+  <section class="section2">
+    <Nyhedsbrev />
+  </section>
 </MainLayout>
 
 <style>
-  section {
+  .section1 {
     background-image: url("public/img/illustrationer/KUNE IL 1@10x-kopi.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .section2 {
+    background-image: url("public/img/illustrationer/KUNE IL 3@10x-kopi.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
