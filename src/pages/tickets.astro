@@ -2,11 +2,12 @@
 import MainLayout from "../layout/main-layout.astro";
 import Textbar from "../components/Textbar.astro";
 import Social from "../components/Social.astro";
+import Newsletter from "../components/Newsletter.astro";
 ---
 
 <MainLayout title="Tickets">
   <main>
-    <img class="grafik" src="/img/illustrationer/KUNE IL 1@10x-kopi.png" alt="grafik" />
+    <img class="grafik" src="/img/illustrationer/blob2.png" alt="grafik" />
 
     <h1>Tickets</h1>
 
@@ -86,7 +87,7 @@ import Social from "../components/Social.astro";
       </div>
 
       <div>
-        <img class="grafik2" src="/img/illustrationer/KUNE IL 2@10x-kopi.png" alt="grafik" />
+        <img class="grafik2" src="/img/illustrationer/blob1.png" alt="grafik" />
       </div>
 
       <div class="image">
@@ -104,6 +105,7 @@ import Social from "../components/Social.astro";
       <img class="grafik3" src="/img/illustrationer/KUNE IL 4@10x-kopi.png" alt="grafik" />
     </section>
   </main>
+  <Newsletter />
   <Social />
 </MainLayout>
 
@@ -154,7 +156,7 @@ import Social from "../components/Social.astro";
   }
   .grafik2 {
     position: relative;
-    top: -13rem;
+    top: -11rem;
     right: 3rem;
   }
   .grafik3 {
@@ -208,6 +210,8 @@ import Social from "../components/Social.astro";
     -webkit-text-stroke: 2px var(--mainBlue);
     font-size: 5rem;
     border-radius: 1.5rem;
+    font-family: "Dance";
+    letter-spacing: 2px;
   }
 
   .fullPrice {
