@@ -5,20 +5,25 @@ import Indeximg from "../components/Indeximg.astro";
 import Banner from "../components/Banner.astro";
 import Kuneimg from "../components/Kuneimg.astro";
 import Volunteerimg from "../components/Volunteerimg.astro";
+<link rel="stylesheet" href="https://use.typekit.net/adj2gwq.css">
 ---
 
 <MainLayout title="Frontpage">
-  <div>
-    <Indeximg />
-    <Textbar />
-    <Banner />
-    <Kuneimg />
-    <Volunteerimg />
-  </div>
+  <section>
+    <div>
+      <Indeximg />
+      <Textbar />
+      <Banner />
+      <Kuneimg />
+      <Volunteerimg />
+    </div>
+  </section>
 </MainLayout>
 
 <style>
-  MainLayout {
+  section {
     background-image: url("public/img/illustrationer/KUNE IL 1@10x-kopi.png");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 </style>
