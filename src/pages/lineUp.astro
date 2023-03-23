@@ -2,6 +2,7 @@
 import MainLayout from "../layout/main-layout.astro";
 import Artist from "../components/Artist.astro";
 import Textbar from "../components/Textbar.astro";
+import Newsletter from "../components/Newsletter.astro";
 const data = await fetch("https://bcsoemsjqytfmopgkthm.supabase.co/rest/v1/kune_scener",
 {
 	method:"GET", 
@@ -31,13 +32,7 @@ console.log(data[0].day);
     </div>  
      <Textbar/>
 
-     <div class="newsletter-container">
-        <form action="/action_page.php">
-            <label for="fname">Nyhedsbrev</label><br>
-            <input type="email" id="fname" name="fname" value=""><br>
-        </form>
-
-     </div>
+    <Newsletter/>
    
     
 
@@ -47,33 +42,7 @@ console.log(data[0].day);
 
 
 <style>
-    .newsletter-container{
-       max-width: 700px;
-       aspect-ratio:650/400;
-        background-image: url("img/nyhedsbrev.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-inline: auto;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .newsletter-container label{
-        color:var(--mainGreen);
-        font-size: 50px;
-    }
-
-    .newsletter-container input{
-        border: none;
-        border-bottom: 1px solid var(--mainRed);
-        width: 250px;
-        
-    }
-
-
-
-
+  
     h1{
         font-size: 45px;
         padding-bottom: 40px;
