@@ -1,0 +1,53 @@
+---
+
+const {name, day} = Astro.props;
+---
+
+<a href="">
+    <div class="artist-container">
+        <img src="/img/artist/artist1.png" alt="">
+        <div class="day">
+            <p>{day}</p>
+        </div>
+        
+        <p class="artist-name">{name}</p>
+    </div>
+</a>
+
+
+<style>
+   
+    .artist-container{
+       
+    }
+    .artist-container img{
+        width: 270px;
+        height: 180px;
+        border-radius: 25px;
+        filter: drop-shadow(0px 4px 10px rgba(70, 70, 70));
+  
+    }
+    .day{
+        
+        position: relative;
+        width: 100px;
+        bottom: 60px;
+        right: 10px;
+    }
+    .day p{
+        background-color: var(--mainGreen);
+        display: inline;
+        padding: 2px 5px;
+        font-size: 10px;
+        border-radius: 25px;
+    }
+    
+    .artist-name{
+        position: relative;
+        bottom: 50px;
+        right: 10px;
+        color:var(--mainRed);
+        font-size: 20px;
+
+    }
+</style>

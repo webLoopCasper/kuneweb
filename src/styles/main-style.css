@@ -5,15 +5,15 @@
   --mainGreen: #d6ff7d;
   --mainBlack: #272727;
   --mainBlue: #1602ff;
+  --mainRed: #FF1717;
 }
 
 a {
   text-decoration: none;
   color: var(--mainBlack);
 }
-body,
-html {
-  overflow-x: hidden;
+body{
+  /* overflow-x: hidden; */
 }
 
 @font-face {
