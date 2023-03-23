@@ -3,18 +3,15 @@ import Textbar from "../components/Textbar.astro";
 import MainLayout from "../layout/main-layout.astro";
 import Newsletter from "../components/Newsletter.astro";
 import Social from "../components/Social.astro";
+import Aboutimg from "../components/Aboutimg.astro";
 ---
 
 <MainLayout title="About us">
   <div class="container"></div>
-  <img src="/img/kune/production/about.jpg " />
-  <h1>About us</h1>
+  <Aboutimg />
   <Textbar />
   <main>
     <div class="container_column">
-      <div class="image">
-        <img src="/img/kune/production/2pic.jpg " style="border-radius: 1.5rem;" />
-      </div>
       <div class="text1">
         <h3>KUNE’S HISTORY & VIBES</h3>
         <p>
@@ -24,9 +21,16 @@ import Social from "../components/Social.astro";
           artistic community.
         </p>
       </div>
+      <div class="image">
+        <img src="/img/kune/production/2pic.jpg " style="border-radius: 1.5rem;" />
+      </div>
     </div>
 
     <div class="container_column2">
+      <div class="image-container">
+        <img src="/img/kune/production/3pic.jpg " class="pic" style="border-radius: 1.5rem;" />
+        <img src="/img/illustrationer/blob2.png" class="blob" />
+      </div>
       <div class="text2">
         <h3>“OTHERNESS”</h3>
         <p>
@@ -37,17 +41,9 @@ import Social from "../components/Social.astro";
           and gain a more complex understanding of what it means to be human.
         </p>
       </div>
-
-      <div class="image-container">
-        <img src="/img/kune/production/3pic.jpg " class="pic" style="border-radius: 1.5rem;" />
-        <img src="/img/illustrationer/blob2.png" class="blob" />
-      </div>
     </div>
 
     <div class="container_column3">
-      <div class="image">
-        <img src="/img/kune/island/firstaid.jpg " style="border-radius: 1.5rem;" />
-      </div>
       <div class="text3">
         <h3>PRACTICAL INFO</h3>
         <p>
@@ -57,9 +53,15 @@ import Social from "../components/Social.astro";
           members.
         </p>
       </div>
+      <div class="image">
+        <img src="/img/kune/island/firstaid.jpg " style="border-radius: 1.5rem;" />
+      </div>
     </div>
 
     <div class="container_column4">
+      <div class="image-container">
+        <img src="/img/kune/island/vibes.jpg " style="border-radius: 1.5rem;" />
+      </div>
       <div class="text4">
         <h3>“THE LOCATION”</h3>
         <p>
@@ -69,10 +71,6 @@ import Social from "../components/Social.astro";
           island’s transformation into a place dedicated to youth and innovative cultural initiatives highlights the shift from conflict to community and symbolizes hope and possibility. By hosting the festival on this historic site, we aim to offer
           a powerful reminder of the positive impact art and culture can have on society and their role in bringing people together and fostering understanding and connection.
         </p>
-      </div>
-
-      <div class="image-container">
-        <img src="/img/kune/island/vibes.jpg " style="border-radius: 1.5rem;" />
       </div>
     </div>
 
@@ -158,7 +156,7 @@ import Social from "../components/Social.astro";
 
     h3 {
       margin-bottom: 2rem;
-      color: #1602ff;
+      color: #000000;
     }
   </style>
 </MainLayout>
