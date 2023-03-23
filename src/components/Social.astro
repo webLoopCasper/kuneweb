@@ -1,0 +1,54 @@
+<div class="right">
+  <img src="public/img/SOME.PNG" alt="" />
+</div>
+<div class="social-container">
+  <div>
+    <div class="facebook"><a href="">Facebook</a></div>
+    <div class="instagram"><a href="">Instagram</a></div>
+    <div class="twitter"><a href="">Twitter</a></div>
+  </div>
+</div>
+
+<style>
+  .right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .right img {
+    width: 200px;
+    position: relative;
+    bottom: 20px;
+    right: 130px;
+  }
+
+  .social-container a {
+    display: inline-block;
+    border-radius: 25px;
+    padding: 10px 25px;
+    background-color: var(--mainBlue);
+    border: 1px solid var(--mainBlue);
+
+    color: var(--mainGreen);
+    font-size: 12px;
+  }
+  .social-container {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--mainBlack);
+  }
+  .facebook {
+    transform: rotate(43deg);
+    position: relative;
+    left: -5px;
+    top: 4px;
+  }
+  .instagram {
+    transform: rotate(-43deg);
+    position: relative;
+    right: 92px;
+  }
+  .twitter a {
+    background-color: white;
+    color: var(--mainBlue);
+  }
+</style>
