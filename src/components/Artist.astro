@@ -1,11 +1,11 @@
 ---
 
-const {name, day} = Astro.props;
+const {name, day,image} = Astro.props;
 ---
 
 <a href="">
     <div class="artist-container">
-        <img src="/img/artist/artist1.png" alt="">
+        <img src={image} alt="">
         <div class="day">
             <p>{day}</p>
         </div>

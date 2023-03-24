@@ -11,33 +11,65 @@ const data = await fetch("https://bcsoemsjqytfmopgkthm.supabase.co/rest/v1/kune_
   },
 }).then((res) => res.json());
 
-console.log(data[0].day);
+console.log(data);
 ---
 
 <MainLayout title="Line up">
+<div class="main-bg">
+
+
   <div class="space-maker">
     <h1>Line Up</h1>
 
     <div class="artist-setup">
       {
         data.map((artistData) => {
-          return <Artist day={artistData.day} name={artistData.name} />;
+          return <Artist day={artistData.day} name={artistData.name} image={artistData.location} />;
         })
       }
     </div>
   </div>
   <Textbar />
+  
+  <div class="art-container">
+    <h2>Art</h2>
+    <div>
+      <img src="img/art/redart.png" alt="">
+    </div>
+   
+    <div class="right">
+      <img src="img/art/darkart.png" alt="">
+    </div>
+   
+      
+      
+  </div>
+  <div class="new-wrapper">
+    <Newsletter />
+  </div>
+ 
+</div>
 
-  <Newsletter />
+ 
+
+ 
 
   <Social />
 </MainLayout>
 
 <style>
+
+  .main-bg{
+    background: url("img/illustrationer/redline2.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-position: left;
+  }
   h1 {
     font-size: 45px;
     padding-bottom: 40px;
   }
+  
   .artist-setup {
     display: flex;
     justify-content: center;
@@ -53,4 +85,20 @@ console.log(data[0].day);
     margin-inline: auto;
     padding: 20px;
   }
+  .art-container{
+    margin: 30px 50px;
+  }
+  .art-container img{
+    margin-top: 30px;
+    width: 700px;
+    border-radius: 25px;
+  }
+  .right{
+    display: flex;
+    justify-content: right;
+  }
+  .new-wrapper{
+    margin-top: 50px;
+  }
+
 </style>
